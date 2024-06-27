@@ -44,6 +44,13 @@ public class DefaultDeployment {
         return this;
     }
 
+    public DefaultDeployment withOriginalPersistence() {
+        webArchive = webArchive.addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
+                .addAsWebInfResource(new File(WEBAPP_SRC, "WEB-INF/tasks-rs-ds.xml"))
+                .addAsWebInfResource(new File(WEBAPP_SRC, "WEB-INF/web.xml"));
+        return this;
+    }
+
     public DefaultDeployment withImportedData() {
         webArchive = webArchive.addAsResource("import.sql");
         return this;
