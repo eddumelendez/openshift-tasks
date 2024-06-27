@@ -96,7 +96,7 @@ public class DemoResource {
     @GET
     @Path("healthcheck/")
     @Produces({"application/json"})
-    public Response checkHealth(@Context SecurityContext context) throws IOException {
+    public Response checkHealth() throws IOException {
     	
     	String response = new String("{\"response\":\"Health Status: " + health + "\", \"health\": " + health + "}");
 

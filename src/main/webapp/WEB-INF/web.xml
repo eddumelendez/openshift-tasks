@@ -24,34 +24,34 @@
     </servlet-mapping>
 
     <!-- Use HTTP Basic for authentication -->
-    <login-config>
-        <auth-method>BASIC</auth-method>
-        <realm-name>RealmUsersRoles</realm-name>
-    </login-config>
+<!--    <login-config>-->
+<!--        <auth-method>BASIC</auth-method>-->
+<!--        <realm-name>RealmUsersRoles</realm-name>-->
+<!--    </login-config>-->
 
-    <context-param>
-      <param-name>resteasy.role.based.security</param-name>
-      <param-value>true</param-value>
-    </context-param>
+<!--    <context-param>-->
+<!--      <param-name>resteasy.role.based.security</param-name>-->
+<!--      <param-value>true</param-value>-->
+<!--    </context-param>-->
 
-    <security-constraint>
-      <web-resource-collection>
-        <web-resource-name>Tasks</web-resource-name>
-        <url-pattern>/ws/tasks/*</url-pattern>
-      </web-resource-collection>
-      <web-resource-collection>
-        <web-resource-name>Users</web-resource-name>
-        <url-pattern>/ws/users/*</url-pattern>
-      </web-resource-collection>
+<!--    <security-constraint>-->
+<!--      <web-resource-collection>-->
+<!--        <web-resource-name>Tasks</web-resource-name>-->
+<!--        <url-pattern>/ws/tasks/*</url-pattern>-->
+<!--      </web-resource-collection>-->
+<!--      <web-resource-collection>-->
+<!--        <web-resource-name>Users</web-resource-name>-->
+<!--        <url-pattern>/ws/users/*</url-pattern>-->
+<!--      </web-resource-collection>-->
 
-      <auth-constraint>
-        <role-name>guest</role-name>
-      </auth-constraint>
-    </security-constraint>
+<!--      <auth-constraint>-->
+<!--        <role-name>guest</role-name>-->
+<!--      </auth-constraint>-->
+<!--    </security-constraint>-->
 
-    <security-role>
-      <role-name>guest</role-name>
-    </security-role>
+<!--    <security-role>-->
+<!--      <role-name>guest</role-name>-->
+<!--    </security-role>-->
 
     <distributable/>
 </web-app>
